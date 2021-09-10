@@ -13,14 +13,7 @@ namespace TemplateMethod.Task1
 
         public void CookMasala(Country country)
         {
-            if (country == Country.India)
-            {
-                cooker = new IndiaRecipy();
-            }
-            else
-            {
-                cooker = new UkrainaRecipy();
-            }
+            throw new NotImplementedException();
         }
     }
 }
