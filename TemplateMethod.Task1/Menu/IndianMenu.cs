@@ -7,7 +7,7 @@ namespace TemplateMethod.Task1.Menu
 {
     public class IndianMenu : MenuFactory
     {
-        public override CookerBase CreateMenu()
+        protected override CookerBase AssignCooker()
         {
             return new IndiaCooker();
         }

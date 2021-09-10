@@ -7,7 +7,11 @@ namespace TemplateMethod.Task1.Menu
 {
     public abstract class MenuFactory
     {
-        public abstract CookerBase CreateMenu();
+        protected abstract CookerBase AssignCooker();
 
+        public CookerBase CreateMenu()
+        {
+            return AssignCooker();
+        }
     }
 }
