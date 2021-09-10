@@ -1,4 +1,6 @@
 ﻿using System;
+using TemplateMethod.Task1.Cookers;
+using TemplateMethod.Task1.Menu;
 
 namespace TemplateMethod.Task1
 {
@@ -13,7 +15,7 @@ namespace TemplateMethod.Task1
 
         public void CookMasala(Country country)
         {
-            throw new NotImplementedException();
+            MenuFactory.CreateMenu(country).CookMasala(cooker);
         }
     }
 }
