@@ -5,9 +5,11 @@ using TemplateMethod.Task1.Cookers;
 
 namespace TemplateMethod.Task1.Menu
 {
-    public abstract class MenuFactory
+    public class UkraineMenu : MenuFactory
     {
-        public abstract CookerBase CreateMenu();
-
+        public override CookerBase CreateMenu()
+        {
+            return new UkraineCooker();
+        }
     }
 }
