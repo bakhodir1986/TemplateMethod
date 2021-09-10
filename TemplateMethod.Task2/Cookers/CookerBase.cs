@@ -12,5 +12,11 @@
             CookChicken(cooker);
             CookTea(cooker);
         }
+
+        public void CookSummerMasala(ICooker cooker)
+        {
+            CookChicken(cooker);
+            CookTea(cooker);
+        }
     }
 }
