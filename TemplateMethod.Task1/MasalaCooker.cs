@@ -14,7 +14,7 @@ namespace TemplateMethod.Task1
 
         public void CookMasala(Country country)
         {
-            MenuFactory menuFactory;
+            Menu.Menu menuFactory;
 
             if (country == Country.India)
             {
