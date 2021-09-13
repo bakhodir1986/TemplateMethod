@@ -14,18 +14,18 @@ namespace TemplateMethod.Task1
 
         public void CookMasala(Country country)
         {
-            Menu.Menu menuFactory;
+            Menu.Menu menu;
 
             if (country == Country.India)
             {
-                menuFactory = new IndianMenu();
+                menu = new IndianMenu();
             }
             else
             {
-                menuFactory = new UkraineMenu();
+                menu = new UkraineMenu();
             }
 
-            menuFactory.CookMasala(cooker);
+            menu.CookMasala(cooker);
         }
     }
 }
