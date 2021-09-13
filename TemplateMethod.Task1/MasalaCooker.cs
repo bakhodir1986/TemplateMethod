@@ -1,5 +1,4 @@
 ﻿using System;
-using TemplateMethod.Task1.Cookers;
 using TemplateMethod.Task1.Menu;
 
 namespace TemplateMethod.Task1
@@ -26,7 +25,7 @@ namespace TemplateMethod.Task1
                 menuFactory = new UkraineMenu();
             }
 
-            menuFactory.CreateMenu().CookMasala(cooker);
+            menuFactory.CookMasala(cooker);
         }
     }
 }

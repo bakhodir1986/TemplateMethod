@@ -1,15 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TemplateMethod.Task1.Cookers;
-
-namespace TemplateMethod.Task1.Menu
+﻿namespace TemplateMethod.Task1.Menu
 {
     public class IndianMenu : MenuFactory
     {
-        protected override CookerBase AssignCooker()
+        public override void CookMasala(ICooker cooker)
         {
-            return new IndiaCooker();
+            CookRice(cooker);
+            CookChicken(cooker);
+            CookTea(cooker);
+        }
+
+        private void CookRice(ICooker cooker)
+        {
+            cooker.FryRice(200, Level.Strong);
+            cooker.SaltRice(Level.Strong);
+            cooker.PepperRice(Level.Strong);
+        }
+
+        private void CookChicken(ICooker cooker)
+        {
+            cooker.FryChicken(100, Level.Strong);
+            cooker.SaltChicken(Level.Strong);
+            cooker.PepperChicken(Level.Strong);
+        }
+
+        private void CookTea(ICooker cooker)
+        {
+            cooker.PrepareTea(15, TeaKind.Green, 12);
         }
     }
 }
