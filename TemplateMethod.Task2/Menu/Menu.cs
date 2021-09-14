@@ -9,6 +9,12 @@
             CookTea(cooker);
         }
 
+        public void SummerVegeterianDish(ICooker cooker)
+        {
+            CookRice(cooker);
+            CookTea(cooker);
+        }
+
         protected abstract void CookRice(ICooker cooker);
         protected abstract void CookChicken(ICooker cooker);
         protected abstract void CookTea(ICooker cooker);
