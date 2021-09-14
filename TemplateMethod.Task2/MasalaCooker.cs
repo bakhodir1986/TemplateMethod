@@ -1,6 +1,7 @@
 ﻿using System;
 using TemplateMethod.Task1.Menu;
-using TemplateMethod.Task2.Cookers;
+using TemplateMethod.Task2.Menu;
+
 
 namespace TemplateMethod.Task2
 {
@@ -15,18 +16,18 @@ namespace TemplateMethod.Task2
 
         public void CookMasala(Country country)
         {
-            MenuFactory menuFactory;
+            RestoranMenu menu;
 
             if (country == Country.India)
             {
-                menuFactory = new IndianMenu();
+                menu = new IndianMenu();
             }
             else
             {
-                menuFactory = new UkraineMenu();
+                menu = new UkraineMenu();
             }
 
-            menuFactory.CreateMenu().CookMasala(cooker);
+            menu.CookMasala(cooker);
         }
     }
 }
